@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rakoo04.github.io/first-thousand/sitemap.xml
