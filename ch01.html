@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chapter 1 · How X ranks a post — The First Thousand</title>
-  <meta name="description" content="Phoenix weights and what a beginner should optimize." />
   <link rel="canonical" href="https://first-thousand.pages.dev/ch01.html" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="top"><div class="wrap nav"><a class="brand" href="./">The First Thousand</a><details class="menu"><summary>Chapters</summary><nav>
-    <a href="./">Home</a><a href="ch00.html">00</a><a href="ch01.html">01</a><a href="ch02.html">02</a><a href="ch03.html">03</a><a href="ch04.html">04</a><a href="ch05.html">05</a><a href="ch06.html">06</a><a href="ch07.html">07</a><a href="ch08.html">08</a><a href="ch09.html">09</a><a href="ch10.html">10</a><a href="ch11.html">11</a><a href="sources.html">Sources</a>
-  </nav></details></div></header>
-  <main class="wrap">
-    <div class="chapter-head"><div class="kicker">Chapter 1 · 14 min</div><h1>How X ranks a post in 2026</h1></div>
-    <div class="lo"><b>Leave when</b> you can explain why 12 thoughtful replies can beat 80 likes.</div>
-    <p>Phoenix predicts ~19 actions, multiplies each by a weight, and sums. X open-sourced the For You ranker on 13 Aug 2026.</p>
-    <table>
-      <tr><th>Action</th><th>Weight</th><th>In likes</th></tr>
-      <tr><td>Copy-link share</td><td>20.0</td><td>40</td></tr>
-      <tr><td>Author reply to a mutual</td><td>20.0</td><td>40</td></tr>
-      <tr><td>Reply / quote / DM share</td><td>5.0</td><td>10</td></tr>
-      <tr><td>Follow</td><td>4.0</td><td>8</td></tr>
-      <tr><td>Like</td><td>0.5</td><td>1</td></tr>
-      <tr><td>Report</td><td>−234</td><td>kills the post</td></tr>
-    </table>
-    <p>Do not quote the 2023 table (reply = 13.5) as current law. Conversation beats hearts.</p>
-    <div class="note">Answer useful comments in 30 minutes. The author-reply-to-a-mutual weight is enormous.</div>
-    <div class="pager"><a href="ch00.html">← Ch 0</a><a href="ch02.html">Chapter 2 →</a></div>
-  </main>
-  <footer><div class="wrap"><p><strong>The First Thousand</strong> is a free synthesis.</p></div></footer>
+<header class="top"><div class="wrap nav"><a class="brand" href="./">The First Thousand</a><details class="menu"><summary>Chapters</summary><nav><a href="./">Home</a><a href="ch00.html">00</a><a href="ch01.html">01</a><a href="ch02.html">02</a><a href="ch03.html">03</a><a href="ch04.html">04</a><a href="ch05.html">05</a><a href="ch06.html">06</a><a href="ch07.html">07</a><a href="ch08.html">08</a><a href="ch09.html">09</a><a href="ch10.html">10</a><a href="ch11.html">11</a><a href="sources.html">Sources</a></nav></details></div></header>
+<main class="wrap">
+<div class="chapter-head"><div class="kicker">Chapter 1 · 18 min</div><h1>How X ranks a post in 2026</h1></div>
+<div class="lo"><b>You can leave this chapter when</b> you can explain why 12 thoughtful replies can outrank 80 likes, and why answering a comment in 30 minutes is not engagement bait.</div>
+<p>X does not broadcast to your followers. Each post is a test: did this earn the next circle of viewers? Follower count is a weak prior. That is why a 200-follower account can outrun a 20k account on a Tuesday, and why six months of posting into silence is usually a reply-and-profile problem, not a luck problem.</p>
+<h2>The model, in one paragraph</h2>
+<p>Phoenix (For You, open-sourced 13 Aug 2026) predicts ~19 actions a viewer might take. Each action has a weight. The score is the weighted sum. You do not need the paper. You need the shape of the weights, because the shape tells you what to write.</p>
+<table>
+<tr><th>Action</th><th>Public weight</th><th>In likes</th><th>What it means</th></tr>
+<tr><td>Copy-link share</td><td>20.0</td><td>×40</td><td>Off-platform send. Rare. Expensive to fake.</td></tr>
+<tr><td>Author replies to a mutual</td><td>20.0</td><td>×40</td><td>Answer useful comments fast.</td></tr>
+<tr><td>Reply / quote / DM share</td><td>5.0</td><td>×10</td><td>Conversation is the growth surface under 1k.</td></tr>
+<tr><td>Follow from the post</td><td>4.0</td><td>×8</td><td>The profile has to close. Chapter 3.</td></tr>
+<tr><td>Like</td><td>0.5</td><td>×1</td><td>A polite nod. Do not optimize for this.</td></tr>
+<tr><td>Report</td><td>−234</td><td>kills it</td><td>Rage-bait is a trap.</td></tr>
+</table>
+<p>Weights will move. Do not quote the 2023 table (reply = 13.5) as current law. The shape survived: conversation and off-platform shares beat hearts.</p>
+<h2>Two circles</h2>
+<p><strong>Circle one</strong> is people who already talk to you. If they reply or the author replies back, the post is allowed to leave the room.</p>
+<p><strong>Circle two</strong> is strangers the model is willing to test. They only show up if circle one produced a score. Beginners try to skip to circle two with a banger. The banger never leaves the room.</p>
+<h2>What this changes about your Tuesday</h2>
+<ol class="teach">
+<li>Write so a specific person can answer. “Thoughts?” is not a reason.</li>
+<li>Sit with the post for 30–40 minutes after you hit send.</li>
+<li>Answer every useful comment as if it were a second post.</li>
+<li>Ignore vanity likes. Log profile visits and unprompted replies.</li>
+</ol>
+<div class="anti"><b>Wrong read</b> “Replies are worth 10× likes, so I will reply ‘this!’ under 80 posts.” Cheerleading trains the graph that you are a bot.</div>
+<div class="ex"><b>Right read</b> You post a 90-day scoreboard. Three peers ask a real question. You answer each with a number. That cluster is what Phoenix is built to promote.</div>
+<div class="drill"><div class="n">Drill · 15 minutes</div><p>Open your last 10 posts. Write likes vs replies that were not yours. Circle high-like / zero-reply posts. Rewrite one last line so it forces a specific answer.</p></div>
+<ul class="check" data-pack="c01">
+<li><label><input type="checkbox" /> I can say reply vs like in my own words</label></li>
+<li><label><input type="checkbox" /> I will answer useful comments within 30 minutes</label></li>
+<li><label><input type="checkbox" /> I stopped quoting the 2023 13.5× table as law</label></li>
+</ul>
+<div class="pager"><a href="ch00.html">← Ch 0</a><a href="ch02.html">Chapter 2 →</a></div>
+</main>
+<footer><div class="wrap"><p>Free synthesis. Not the paid Attention Playbook.</p></div></footer>
+<script src="checks.js"></script>
 </body></html>
