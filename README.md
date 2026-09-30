@@ -1,32 +1,26 @@
 # The First Thousand
 
-A free from-scratch X (Twitter) growth course: 0 → 1,000 real followers.
+A free 12-chapter course: take an X account from 0 to 1,000 real followers.
 
 Static HTML. Checklist state lives in the browser only.
 
-## Publish on Cloudflare Pages (2 minutes)
+## Chapters
 
-GitHub Pages is not enabled on this repo, so `rakoo04.github.io/first-thousand` 404s. Use Cloudflare.
+00 How to take this course
+01 How X ranks a post in 2026
+02 Two currencies and the ladder
+03 A profile that converts
+04 Reply craft
+05 The four original jobs
+06 Rung 0–100
+07 Rung 100–500
+08 Rung 500–1,000
+09 Daily system
+10 Kill list
+11 8-week plan
+Sources / annotated bibliography
 
-1. Open [Workers & Pages](https://dash.cloudflare.com/?to=/:account/workers-and-pages)
-2. **Create application → Pages → Connect to Git**
-3. Authorize GitHub and pick **`rakoo04/first-thousand`**
-4. Settings:
-   - Project name: `first-thousand` (URL becomes `first-thousand.pages.dev`)
-   - Production branch: `main`
-   - Framework preset: **None**
-   - Build command: *leave empty*
-   - Build output directory: `/`
-5. **Save and Deploy**
+## Publish
 
-First deploy is usually live in under a minute at `https://first-thousand.pages.dev`.
-
-Custom domain later: Pages project → Custom domains → add `course.rahulmeghwal.com` or similar → Cloudflare adds the CNAME.
-
-## Local
-
-Open `index.html` in a browser, or:
-
-```
-python3 -m http.server 8080
-```
+Cloudflare: Framework None. wrangler.toml uses `[assets] directory = "."`.
+Deploy command: `npx wrangler deploy`.
