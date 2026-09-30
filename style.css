@@ -68,3 +68,9 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 48px; font-size: 14p
 .toc .num { font-family: Fraunces, serif; font-weight: 650; width: 42px; color: var(--ember); }
 .syllabus { padding-bottom: 64px; }
 @media (max-width: 800px) { .stats, .two { grid-template-columns: 1fr; } }
+.tpl { background: var(--white); border: 1px solid var(--line); padding: 12px 16px; margin: 12px 0 18px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.note b { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ember); margin-bottom: 4px; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
+.pdf-link { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; color: #fff; background: #0b6e6b; padding: 8px 12px; white-space: nowrap; }
+.pdf-link:hover { background: #084f4d; }
+@media (max-width: 480px) { .pdf-link { padding: 8px; font-size: 12px; } .brand { font-size: 15px; } }
